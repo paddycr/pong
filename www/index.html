@@ -27,24 +27,14 @@
       <ion-header-bar class="bar-royal">
         <h1 class="title">Pong</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content ng-controller="ListController">
       <center>Welcome Pong an App to find table tennis tables across london</center>
 
           <ion-list>
-              <ion-item href="#" onclick="window.open(&apos;http://maps.google.com/maps?t=h&amp;q=loc:51.4538673,-0.1239637&amp;z=17&apos;, &apos;_system&apos; , &apos;location=yes&apos;); return false;">
-                  Windmill Brixton
-              </ion-item>
-              <ion-item href="#">
-                  Table 2
-              </ion-item>
-              <ion-item href="#">
-                  Table 3
-              </ion-item>
-              <ion-item href="#">
-                  Table 4
+              <ion-item ng-repeat="item in artists" ng-href="http://maps.google.com/maps?t=h&amp;q=loc:{{item.lat}},{{item.long}}&amp;z=17, onclick=" window.open(this.href,="" "="" _system'="" ,="" 'location="yes&apos;);" return="" false;"="">
+                  {{item.long}}
               </ion-item>
           </ion-list>
       </ion-content>
-    </ion-pane>
-  </body>
+    </ion-pane>  </body>
 </html>
