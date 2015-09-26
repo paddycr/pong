@@ -18,8 +18,15 @@ angular.module('starter', ['ionic'])
   });
 })
 
+
+
 .controller('ListController', ['$scope', '$http', function($scope, $http) {
     $http.get('js/data.json').success(function(data){
         $scope.artists =data;
         });
+    $scope.gotomaps = function(url){
+            window.open(url, '_system', 'location=no');
+        };
+
+
 }]);
