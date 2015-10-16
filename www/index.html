@@ -31,7 +31,7 @@
       <center>Welcome Pong an App to find table tennis tables across london</center>
 
           <ion-list>
-              <ion-item ng-repeat="item in artists" href="#" ng-click="gotomaps(&apos;http://maps.google.com/maps?t=h&amp;q=loc:{{item.lat}},{{item.long}}&amp;z=17&apos;)">
+              <ion-item ng-repeat="item in artists" href="#" ng-click="gotomaps('http://maps.google.com/maps?t=h&q=loc:{{item.lat}},{{item.long}}&z=17')">
                   {{item.name}}
               </ion-item>
           </ion-list>
