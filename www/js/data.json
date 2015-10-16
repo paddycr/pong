@@ -1,12 +1,18 @@
 [
   {
-    "name": "windmill",
+    "name": "Windmill Brixon",
     "lat": "51.4538673",
     "long": "-0.1239637"
   },
   {
-    "name": "soho square",
-    "lat": "51.3538673",
-    "long": "-0.0239637"
+    "name": "Soho Square",
+    "lat": "51.5153086",
+    "long": "-0.1329049"
+  },
+  {
+     "name": "Golden Square Soho",
+     "lat": "51.5116645",
+     "long": "-0.1371636"
   }
 ]
+
