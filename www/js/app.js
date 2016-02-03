@@ -21,7 +21,7 @@ angular.module('starter', ['ionic'])
 
 
 .controller('ListController', ['$scope', '$http', function($scope, $http) {
-    $http.get('js/data.json').success(function(data){
+    $http.get('http://150.107.152.122:8080/api/tables').success(function(data){
         $scope.artists =data;
         });
     $scope.gotomaps = function(url){
