@@ -45,20 +45,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var ionic_angular_1 = require('ionic-angular');
+var http_1 = require('angular2/http');
 var Page1 = (function () {
-    function Page1() {
+    function Page1(http, nav) {
+        var _this = this;
+        this.http = http;
+        this.http.get("http://150.107.152.122:8080/api/tables")
+            .subscribe(function (data) {
+            _this.items = JSON.parse(data._body); //Bind data to items object  
+        }, function (error) {
+            console.log(error); // Error getting the data
+        });
     }
     Page1 = __decorate([
         ionic_angular_1.Page({
             templateUrl: 'build/pages/page1/page1.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http, ionic_angular_1.NavController])
     ], Page1);
     return Page1;
 }());
 exports.Page1 = Page1;
 
-},{"ionic-angular":325}],3:[function(require,module,exports){
+},{"angular2/http":9,"ionic-angular":325}],3:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
