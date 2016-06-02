@@ -10,7 +10,7 @@ export class Page1 {
     this.http = http;
     this.platform = platform;
 
-    this.http.get("http://150.107.152.122:8080/api/tables")
+    this.http.get("http://ponglondon.s3-website-us-west-2.amazonaws.com/")
       .subscribe(data =>{
         this.items=JSON.parse(data._body);//Bind data to items object  
        },error=>{

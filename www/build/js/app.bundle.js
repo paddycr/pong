@@ -51,7 +51,7 @@ var Page1 = (function () {
         var _this = this;
         this.http = http;
         this.platform = platform;
-        this.http.get("http://150.107.152.122:8080/api/tables")
+        this.http.get("http://ponglondon.s3-website-us-west-2.amazonaws.com/")
             .subscribe(function (data) {
             _this.items = JSON.parse(data._body); //Bind data to items object  
         }, function (error) {
